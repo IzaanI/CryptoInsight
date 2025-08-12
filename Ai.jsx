@@ -16,7 +16,7 @@ function Ai({setAboutOutput, setInsightOutput, name, data}){
                         Avoid using phrases like 'I recommend' and try to speak objectively. Speak strictly about the crypto at hand and please avoid comparing to other coins.
                         The following is some JSON data that you may use if nessessary: ${data}`
 
-    const ai = new GoogleGenAI({ apiKey: "AIzaSyDGy_2A86bziw1OPJJSyHKy2BtbOjFNov0" });
+    const ai = new GoogleGenAI({ apiKey: "YOUR_API_KEY" });
 
     useEffect(() =>{
         async function callGemini() {
@@ -41,5 +41,6 @@ function Ai({setAboutOutput, setInsightOutput, name, data}){
     },[])
 
 }
+
 
 export default Ai
