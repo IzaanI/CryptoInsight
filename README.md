@@ -1,7 +1,6 @@
 # CryptoInsight [(Link)](https://izaani.github.io/CryptoInsight/)
 
-CryptoInsight is a sleek crypto tracking web app that delivers real-time market data and AI-powered investment insights.  
-Built with React and the CoinGecko API, it helps you quickly analyze any cryptocurrency and make informed decisions.
+CryptoInsight is a sleek crypto tracking web app that delivers real-time market data and AI-powered investment insights. Built with React and the CoinGecko API, it helps you quickly analyze any cryptocurrency and make informed decisions. Google Gemini API was leveraged for AI response generation.
 
 ## ✨ Features
 - Live Price Tracking – Stay updated on the latest values
