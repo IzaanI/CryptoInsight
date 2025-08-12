@@ -1,0 +1,415 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-image:linear-gradient(to top right, #111827CC, rgb(44, 43, 43), #111827CC);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  box-shadow:none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover {
+  border-color: limegreen;
+  box-shadow: 0 0 6px limegreen;
+}
+button:focus{
+  border-color: limegreen;
+  box-shadow: 0 0 6px limegreen;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; translate:0 -35px;}
+  to { opacity: 1; translate:0 0px;}
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/*////////////////////*/
+.header-crypto{
+  margin-top:5px;
+  margin-bottom:5px;
+  padding-bottom:10px;
+  font-size:75px;
+
+  font-weight:600;
+
+  transition: opacity 0.1s step-end;
+  opacity:100%;
+  animation:fadeIn 1s ease-out forwards;
+}
+
+.header-span{
+  color:limegreen;
+  font-weight:600;
+  transition: translate 0.2s;
+}
+
+.header-crypto-focused{
+  margin-top:5px;
+  margin-bottom:5px;
+  padding-bottom:40px;
+  font-size:75px;
+
+  font-weight:600;
+
+  transition: opacity 5s step-start;
+  
+  opacity:0%
+  
+}
+
+.website-description{
+  padding-bottom:20px;
+  font-size:18px;
+  font-weight:100;
+
+  transition: opacity 0.1s step-end;
+  opacity:100%;
+  animation:fadeIn 0.75s ease-out forwards;
+}
+
+.website-description-focused{
+  padding-bottom:20px;
+  font-size:18px;
+  font-weight:100;
+
+  transition: opacity 0.01s ease-in-out;
+  opacity:0%
+}
+
+.ai-powered{
+  color:limegreen;
+  font-weight:400;
+}
+
+/*////////////////////////*/
+
+.main-container{
+  width:100%;
+  animation:fadeIn 1s ease-out forwards;
+}
+
+.search-bar {
+  transition: border-color 0.6s, border-radius 0.4s, box-shadow 0.6s, transform 0.45s ease, translate 0.2s ease;
+  backdrop-filter: blur(10px);
+  border: 0px solid;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #1118277f;
+  margin-bottom: 12px;
+  color: white;
+  outline:none;
+  opacity:100%;
+
+  width:50vw;
+  height:4vh;
+  padding-top:14px;
+  padding-bottom:14px;
+  padding-left:19px;
+
+  font-size:17px;
+
+}
+
+.search-bar:hover {
+  border-color: limegreen;
+  box-shadow: 0 0 16px limegreen;
+}
+
+.search-bar:focus {
+  border-radius: 30px;
+  transform: scale(1.2);
+  translate:0 -150px;
+}
+
+.search-bar::placeholder {
+  color: gray;
+  font-size: 17px;
+  align-content:center;
+  
+}
+
+/*////////////////////////*/
+
+.dashboard-container{
+  animation:fadeIn 1s ease-out forwards;
+  max-width: 925px;
+  
+}
+
+.back-button{
+  position:fixed;
+  top:32px;
+  left:35px;
+
+  outline:none;
+  background-color: #1118277f;
+  
+  transition: box-shadow 0.5s ease border-color 0.5s ease;
+}
+
+.coin-container{
+  display:flex;
+  background-color: #1118277f;
+  border-radius:10px;
+
+  padding-left:35px;
+  padding-right:35px;
+
+  font-weight:550;
+  font-size:45px;
+
+  width:56vw;
+
+  justify-content: space-between;
+  align-items:center;
+}
+
+.data-icon{
+  position: relative;
+  top: 10px; 
+  margin-right:8px;
+}
+
+.data-id{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.data-price{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.data-symbol{
+  font-size:19.5px;
+  color:grey;
+  font-weight: lighter;
+}
+
+.data-symbol-up{
+  font-size:17px;
+  color:limegreen;
+  font-weight: lighter;
+}
+
+.data-symbol-down{
+  font-size:17px;
+  color:rgb(255, 0, 0);
+  font-weight: lighter;
+}
+
+/*////////////////////////*/
+
+.about-insight-container{
+  display:flex;
+  gap:8px;
+  margin-top:16px;
+}
+
+.about-button{
+  width:50%;
+  background-color: #1118277f;
+}
+
+.insight-button {
+  width: 50%;
+  background-color: #1118277f;
+  transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
+}
+
+.insight-button:hover{
+  background-color: limegreen;
+  font-weight: bold;
+  color:#111827;
+}
+
+/*////////////////////////*/
+
+.extra-info{
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  margin-top:16px;
+}
+
+.market-cap-container{
+  display:flex;
+  justify-content: space-between;
+  width:50%;
+  border-radius:8px;
+  background-color: #1118277f;
+}
+
+.market-cap-text{
+  font-size:17px;
+  font-weight: lighter;
+  color:grey;
+  margin-bottom:0px;
+}
+
+.market-cap-value{
+  font-size:28px;
+  font-weight: 600;
+  margin-top:1px;
+  margin-bottom:18px;
+}
+
+.market-cap-left{
+  margin-left:28px;
+}
+
+.market-cap-image{
+  position:relative;
+  top: 21px; 
+  margin-right:26px;
+}
+
+.volume-container{
+  display:flex;
+  width:50%;
+  justify-content: space-between;
+  border-radius:8px;
+  background-color: #1118277f;
+}
+
+.volume-text{
+  font-size:17px;
+  font-weight: lighter;
+  color:grey;
+  margin-bottom:0px;
+}
+
+.volume-value{
+  font-size:28px;
+  font-weight: 600;
+  margin-top:1px;
+  margin-bottom:18px;
+}
+
+.volume-left{
+  margin-left:24px;
+}
+
+
+/*////////////////////////*/
+
+.popular-crypto-container-dashboard{
+  display:flex;
+  justify-content: space-evenly;
+  gap:8px;
+
+
+}
+
+.popular-crypto-container-search {
+  position: fixed;
+  top: 60%;       /* adjust to desired position */
+  left: -13%;     /* adjust */
+  display: flex;
+  justify-content: space-evenly;
+  gap: 0px;
+  width: 1000px;    /* or any fixed / % width you want */
+
+  animation:fadeIn 0.25s ease-out forwards;
+}
+
+.popular-crypto{
+  background-color: #1118277f;
+  width:15%;
+  border-radius: 20px;
+}
+
+.popular-search{
+  margin-top:36px;
+  font-size:21px;
+  font-weight:bold;
+
+  position:fixed;
+  top:22%;
+  left:35%;
+
+  animation:fadeIn 0.25s ease-out forwards;
+
+}
+
+.popular-dashboard{
+  margin-top:36px;
+  margin-bottom:28px;
+  font-size:21px;
+  font-weight:bold;
+}
+
+/*////////////////////////*/
+
+.ai-output{
+  width: 100%;              /* fixed width */
+  max-width:893px;       /* prevents growing beyond this */
+  overflow-wrap: break-word; /* wrap long words */
+  word-break: break-word;    /* alternative support */
+  white-space: normal;       /* allow multi-line text */
+
+  border-radius:8px;
+  margin-top:16px;
+  padding-top:16px;
+  padding:16px;
+  background-color: #1118277f;
+
+  animation:fade 0.3s ease-out forwards;
+}
